@@ -15,11 +15,16 @@ jobs:
       - echo "building 123..."
       - npm i
       - npx hardhat compile
+    artifacts:
+      - name: node_modules
  
 
   - name: test
     commands:
       - echo "testing..."
+      - npx hardhat test
+    resources:
+      - name: node_modules
 
 
   - name: deploy
