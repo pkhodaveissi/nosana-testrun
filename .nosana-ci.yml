@@ -13,7 +13,7 @@ jobs:
   - name: build
     commands:
       - echo "building 123..."
-      - npm ci
+      - npm i
       - npx hardhat compile
  
 
