@@ -13,17 +13,15 @@ jobs:
   - name: build
     commands:
       - echo "building 123..."
-    artifacts:
-      - name: my-build
+      - npm ci
+      - npx hardhat compile
+ 
 
   - name: test
     commands:
       - echo "testing..."
-    resources:
-      - name: my-build
+
 
   - name: deploy
     commands:
       - echo "deploying..."
-    resources:
-      - name: my-build
